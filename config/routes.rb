@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'comics#index'
+  root to: 'users#index'
+  resources :users
   resources :comics
 end
