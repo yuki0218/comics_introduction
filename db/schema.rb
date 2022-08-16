@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2022_08_15_084640) do
     t.string "title", null: false
     t.string "author", null: false
     t.integer "volume", null: false
+    t.integer "target_age_id", null: false
+    t.integer "genre_id", null: false
     t.text "memo"
     t.boolean "completion", null: false
     t.bigint "user_id", null: false

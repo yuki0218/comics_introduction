@@ -4,6 +4,8 @@ class CreateComics < ActiveRecord::Migration[6.0]
       t.string :title, null: false
       t.string :author, null: false
       t.integer :volume, null: false
+      t.integer :target_age_id, null: false
+      t.integer :genre_id, null: false
       t.text :memo
       t.boolean :completion, null: false
       t.references :user, null: false, foreign_key: true
