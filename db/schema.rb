@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_08_15_084640) do
     t.integer "target_age_id", null: false
     t.integer "genre_id", null: false
     t.text "memo"
-    t.boolean "completion", null: false
+    t.boolean "completion", default: false, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

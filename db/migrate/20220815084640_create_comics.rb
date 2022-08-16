@@ -7,7 +7,7 @@ class CreateComics < ActiveRecord::Migration[6.0]
       t.integer :target_age_id, null: false
       t.integer :genre_id, null: false
       t.text :memo
-      t.boolean :completion, null: false
+      t.boolean :completion, null: false, default: false
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
