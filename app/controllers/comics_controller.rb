@@ -5,4 +5,5 @@ class ComicsController < ApplicationController
   def new
     @comic = Comic.new
   end
+
 end

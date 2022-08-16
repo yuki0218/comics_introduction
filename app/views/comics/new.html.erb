@@ -1,0 +1,25 @@
+<div>
+  <%= form_with model: @comic, local: true do |f| %>
+    <div>タイトル</div>
+    <%= f.text_field :title, placeholder:"タイトル" %>
+
+    <div>作者</div>
+    <%= f.text_field :author, placeholder:"作者" %>
+
+    <div>最新巻</div>
+    <%= f.text_field :volume, placeholder:"巻数" %>
+
+    <div>対象年齢</div>
+    <%= f.collection_select(:target_age_id, TargetAge.all, :id, :name, {}, {class: "target_select"}) %>
+
+    <div>ジャンル</div>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "genre_select"}) %>
+
+    <div>完結</div>
+    <%= f.check_box :completion %>
+    <%= f.label :completion, "完結している" %>
+
+    <div>メモ</div>
+    <%= f.text_area :memo, placeholder:"(空白で構いません)" %>
+  <% end %>
+</div>
