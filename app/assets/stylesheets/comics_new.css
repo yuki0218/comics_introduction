@@ -1,0 +1,45 @@
+.new-comic {
+  width: 100vw;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(22966433.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.comic-input {
+  background-color: white;
+  width: 50%;
+  padding: 5px;
+  border: 4px solid black;
+}
+
+.tag {
+  font-weight: 600;
+  margin: 5px;
+}
+
+.input-form {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.completion-form {
+  display: block;
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.comic-btn {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 10px auto 5px;
+}

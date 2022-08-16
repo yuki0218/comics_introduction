@@ -1,27 +1,32 @@
-<div>
-  <%= form_with model: @comic, local: true do |f| %>
-    <div>タイトル</div>
-    <%= f.text_field :title, placeholder:"タイトル" %>
+<%= render "share/sub_header" %>
+<div class="new-comic">
+  <div class="comic-input">
+    <%= form_with model: @comic, local: true do |f| %>
+      <div class="tag">タイトル</div>
+      <%= f.text_field :title, placeholder: "タイトル", class: "input-form" %>
 
-    <div>作者</div>
-    <%= f.text_field :author, placeholder:"作者" %>
+      <div class="tag">作者</div>
+      <%= f.text_field :author, placeholder: "作者", class: "input-form" %>
 
-    <div>最新巻</div>
-    <%= f.text_field :volume, placeholder:"巻数" %>
+      <div class="tag">最新巻</div>
+      <%= f.text_field :volume, placeholder: "巻数", class: "input-form" %>
 
-    <div>対象年齢</div>
-    <%= f.collection_select(:target_age_id, TargetAge.all, :id, :name, {}, {class: "target_select"}) %>
+      <div class="tag">対象年齢</div>
+      <%= f.collection_select(:target_age_id, TargetAge.all, :id, :name, {}, {class: "input-form"}) %>
 
-    <div>ジャンル</div>
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "genre_select"}) %>
+      <div class="tag">ジャンル</div>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "input-form"}) %>
 
-    <div>完結</div>
-    <%= f.check_box :completion %>
-    <%= f.label :completion, "完結している" %>
+      <div class="tag">完結</div>
+      <div class="completion-form">
+        <%= f.check_box :completion %>
+        <%= f.label :completion, "完結している" %>
+      </div>
 
-    <div>メモ</div>
-    <%= f.text_area :memo, placeholder:"(空白で構いません)" %>
+      <div class="tag">メモ</div>
+      <%= f.text_area :memo, placeholder:"(空白で構いません)", class: "input-form" %>
 
-    <%= f.submit "投稿する" %>
-  <% end %>
+      <div><%= f.submit "投稿する", class: "comic-btn" %></div>
+    <% end %>
+  </div>
 </div>

@@ -1,0 +1,27 @@
+.sub-header {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(22945218.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sub-site-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.sub-site-name a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
