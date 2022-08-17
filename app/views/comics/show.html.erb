@@ -1,0 +1,50 @@
+<%= render "share/sub_header" %>
+<div class="show-comic">
+  <div class="comic-details">
+    <div class="comic-detail">
+      <div class="detail-tag">タイトル</div>
+      <div class="detail-main"><%= @comic.title %></div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">作者</div>
+      <div class="detail-main"><%= @comic.author %></div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">最新巻</div>
+      <div class="detail-main"><%= @comic.volume %></div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">対象年齢</div>
+      <div class="detail-main"><%= @comic.target_age.name %></div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">ジャンル</div>
+      <div class="detail-main"><%= @comic.genre.name %></div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">完結</div>
+      <div class="detail-main">
+        <% if @comic.completion %>
+          完結しています
+        <% else %>
+          まだ完結していません
+        <% end %>
+      </div>
+    </div>
+
+    <div class="comic-detail">
+      <div class="detail-tag">メモ</div>
+      <div class="detail-main"><%= @comic.memo %></div>
+    </div>
+  </div>
+
+  <div class="show-btns">
+    <div class="edit-btn"><%= link_to "編集", "/" %></div>
+    <div class="destroy-btn"><%= link_to "削除", "/" %></div>
+  </div>
+</div>
