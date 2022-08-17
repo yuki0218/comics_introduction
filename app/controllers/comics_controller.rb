@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   def index
+    @comics = Comic.order("updated_at DESC")
   end
 
   def new
