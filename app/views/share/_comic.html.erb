@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="comic-title"><%= link_to comic.title, '/' %></div>
+  <div class="comic-title"><%= link_to comic.title, comic_path(comic.id) %></div>
   <div class="comic-info">
     <div class="comic-volume"><%= comic.volume %>巻</div>
     <div class="comic-completion">
