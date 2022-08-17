@@ -1,9 +1,9 @@
 .show-comic {
   box-sizing: border-box;
   width: 100vw;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 120px);
   background-image: url(22966433.jpg);
-  background-position: center;
+  background-position: top;
   background-size: cover;
   padding-top: 50px;
   padding-bottom: 100px;
