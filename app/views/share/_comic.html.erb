@@ -1,0 +1,14 @@
+<div class="content">
+  <div class="comic-title"><%= link_to comic.title, '/' %></div>
+  <div class="comic-info">
+    <div class="comic-volume"><%= comic.volume %>巻</div>
+    <div class="comic-completion">
+    <% if comic.completion %>
+      完結
+    <% else %>
+      未完  
+    <% end %>
+    </div>
+    <div class="comic-author">作者:<%= comic.author %></div>
+  </div>
+</div>

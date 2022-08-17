@@ -3,5 +3,6 @@
   box-sizing: border-box;
   width: calc(35% - 10px);
   height: calc(100% - 10px);
+  padding: 25px;
   margin: 5px;
 }

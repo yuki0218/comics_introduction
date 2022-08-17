@@ -1,0 +1,27 @@
+.content {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.comic-title {
+}
+
+.comic-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+.comic-info {
+  display: flex;
+  justify-content: right;
+}
+
+.comic-volume,
+.comic-completion,
+.comic-author {
+  margin-left: 10px;
+}
+
+
+
