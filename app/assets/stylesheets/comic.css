@@ -19,7 +19,8 @@
 
 .comic-volume,
 .comic-completion,
-.comic-author {
+.comic-author,
+.comic-user {
   margin-left: 10px;
 }
 

@@ -1,6 +1,6 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.order("updated_at DESC")
+    @comics = Comic.where.not(user_id: current_user.id).order("updated_at DESC")
   end
 
   def new
