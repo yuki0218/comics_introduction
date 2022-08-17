@@ -32,6 +32,12 @@ class ComicsController < ApplicationController
     end
   end
 
+  def destroy
+    comic = Comic.find(params[:id])
+    comic.destroy
+    redirect_to root_path
+  end
+
   private
 
   def comic_params
