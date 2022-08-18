@@ -11,7 +11,7 @@
     </div>
     <div class="comic-author">作者：<%= comic.author %></div>
     <% if current_user.id != comic.user.id %>
-      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, "/" %></div>
+      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
     <% end %>
   </div>
 </div>
