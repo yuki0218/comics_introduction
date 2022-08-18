@@ -39,6 +39,10 @@ class ComicsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @comics = Comic.search(params[:title_word])
+  end
+
   private
 
   def comic_params

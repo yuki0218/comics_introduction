@@ -10,4 +10,12 @@ class Comic < ApplicationRecord
   belongs_to :user
   belongs_to :target_age
   belongs_to :genre
+
+  def self.search(search)
+    if search != ""
+      Comic.where('title LIKE(?)', "%#{search}%").order("updated_at DESC")
+    else
+      Comic.order("updated_at DESC")
+    end
+  end
 end
