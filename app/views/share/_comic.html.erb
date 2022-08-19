@@ -1,6 +1,9 @@
 <div class="content">
   <div class="comic-title"><%= link_to comic.title, comic_path(comic.id) %></div>
   <div class="comic-info">
+    <% if current_user.id != comic.user.id %>
+      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
+    <% end %>
     <div class="comic-volume"><%= comic.volume %>巻</div>
     <div class="comic-completion">
     <% if comic.completion %>
@@ -10,8 +13,5 @@
     <% end %>
     </div>
     <div class="comic-author">作者：<%= comic.author %></div>
-    <% if current_user.id != comic.user.id %>
-      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
-    <% end %>
   </div>
 </div>
