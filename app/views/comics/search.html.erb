@@ -3,6 +3,12 @@
 <div class="main-space">
   <%= render "share/side_bar" %>
   <div class="main-comics">
+    <div class="drawer-toggle" id="drawer-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="now-page">検索結果</div>
     <%= render partial: 'share/comic', collection: @comics %>
   </div>
 </div>
