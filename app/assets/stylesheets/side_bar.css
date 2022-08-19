@@ -6,3 +6,58 @@
   padding: 25px;
   margin: 5px;
 }
+
+.all-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.all-btn a {
+  font-weight: 600;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px;
+  border: 1px solid black;
+}
+
+.search-form {
+  margin-top: 25px;
+}
+
+.title-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.title-word-search {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 5px auto;
+}
+
+.search-btn {
+  display: block;
+  padding: 5px 10px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.genre-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.genre-sub {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.genre-search {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 5px auto;
+}

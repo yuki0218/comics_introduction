@@ -1,13 +1,22 @@
 <div class="side-bar">
-  <div class="all-btn"><%= link_to "他の人の投稿を見る", comics_path %></div>
-  <%= form_with url: search_comics_path, local: true, method: :get, class: "search-form" do |f|%>
-    <%= f.text_field :title_word, placeholder: "検索" %>
-    <%= f.submit "検索" %>
-  <% end %>
+  <div class="all-btn"><%= link_to "全ての投稿を見る", comics_path %></div>
 
-  <%= form_with url: search_comics_path, local: true, method: :get, class: "search-form" do |f|%>
-    <%= f.collection_select(:target_age, TargetAge.all, :id, :name, {}, {}) %>
-    <%= f.collection_select(:genre, Genre.all, :id, :name, {}, {}) %>
-    <%= f.submit "検索" %>
-  <% end %>
+  <div class="search-form">
+    <div class="title-name">タイトル検索</div>
+    <%= form_with url: search_comics_path, local: true, method: :get do |f|%>
+      <%= f.text_field :title_word, placeholder: "検索", class: "title-word-search" %>
+      <div ><%= f.submit "検索", class: "search-btn" %></div>
+    <% end %>
+  </div>
+
+  <div class="search-form">
+    <div class="genre-name">ジャンル検索</div>
+    <%= form_with url: search_comics_path, local: true, method: :get do |f|%>
+      <div class="genre-sub">対象年齢</div>
+      <%= f.collection_select(:target_age, TargetAge.all, :id, :name, {}, {class: "genre-search"}) %>
+      <div class="genre-sub">ジャンル</div>
+      <%= f.collection_select(:genre, Genre.all, :id, :name, {}, {class: "genre-search"}) %>
+      <div><%= f.submit "検索", class: "search-btn" %></div>
+    <% end %>
+  </div>
 </div>
