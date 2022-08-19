@@ -40,7 +40,11 @@ class ComicsController < ApplicationController
   end
 
   def search
-    @comics = Comic.search(params[:title_word])
+    if params[:title_word] != nil
+      @comics = Comic.search_title(params[:title_word])
+    else
+      @comics = Comic.search_genre(params[:target_age], params[:genre])
+    end
   end
 
   private
