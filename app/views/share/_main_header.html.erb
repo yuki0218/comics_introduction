@@ -1,5 +1,9 @@
 <header class="main-header">
-  <div class="site-name"><a href="/">COMICS<br>introduction</a></div>
+  <div class="site-name">
+    <%= link_to root_path do %>
+      COMICS<br>introduction
+    <% end %>
+  </div>
   <div class="right-btns">
     <% if user_signed_in? %>
       <div class="right-box top-right-box"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "right-btn" %></div>
