@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @comics = Comic.where(user_id: current_user.id)
+    @comics = Comic.where(user_id: current_user.id).includes(:user)
   end
 
   def show

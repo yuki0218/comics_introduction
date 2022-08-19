@@ -1,6 +1,6 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.where.not(user_id: current_user.id).order("updated_at DESC")
+    @comics = Comic.where.not(user_id: current_user.id).order("updated_at DESC").includes(:user)
   end
 
   def new
@@ -41,9 +41,9 @@ class ComicsController < ApplicationController
 
   def search
     if params[:title_word] != nil
-      @comics = Comic.search_title(params[:title_word])
+      @comics = Comic.search_title(params[:title_word]).includes(:user)
     else
-      @comics = Comic.search_genre(params[:target_age], params[:genre])
+      @comics = Comic.search_genre(params[:target_age], params[:genre]).includes(:user)
     end
   end
 
