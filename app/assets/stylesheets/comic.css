@@ -31,3 +31,14 @@
   color: black;
 }
 
+.good {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.good a {
+  text-decoration: none;
+  color: black;
+}
+

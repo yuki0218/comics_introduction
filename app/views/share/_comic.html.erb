@@ -4,17 +4,21 @@
     <% if current_user.id != comic.user.id %>
       <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
     <% end %>
+
     <div class="comic-volume"><%= comic.volume %>巻</div>
+
     <div class="comic-completion">
-    <% if comic.completion %>
-      完結
-    <% else %>
-      未完  
-    <% end %>
+      <% if comic.completion %>
+        完結
+      <% else %>
+        未完  
+      <% end %>
     </div>
+
     <div class="comic-author">作者：<%= comic.author %></div>
-    <% if current_user.id != comic.user.id %>
-      <div>
+    
+    <div class="good">
+      <% if current_user.id != comic.user.id %>
         <% if current_user.already_favorite(comic) %>
           <%= link_to comic_favorites_path(comic.id), method: :delete do %>
             <i class="fa-solid fa-star"></i>
@@ -24,7 +28,8 @@
             <i class="fa-regular fa-star"></i>
           <% end %>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    
   </div>
 </div>
