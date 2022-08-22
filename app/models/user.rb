@@ -8,4 +8,8 @@ class User < ApplicationRecord
 
   has_many :comics
   has_many :validates
+
+  def already_favorite(comic)
+    Favorite.exists?(user_id: self.id, comic_id: comic.id)
+  end
 end
