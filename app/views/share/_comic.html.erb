@@ -1,10 +1,7 @@
 <div class="content">
   <div class="comic-title"><%= link_to comic.title, comic_path(comic.id) %></div>
-  <div class="comic-info">
-    <% if current_user.id != comic.user.id %>
-      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
-    <% end %>
 
+  <div class="comic-info">
     <div class="comic-volume"><%= comic.updated_at.month %>/<%= comic.updated_at.day %>更新 <%= comic.volume %>巻</div>
 
     <div class="comic-completion">
@@ -16,7 +13,13 @@
     </div>
 
     <div class="comic-author">作者：<%= comic.author %></div>
-    
+  </div>
+
+  <div class="bottom-contents">
+    <% if current_user.id != comic.user.id %>
+      <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
+    <% end %>
+
     <div class="good">
       <% if current_user.id != comic.user.id %>
         <% if current_user.already_favorite(comic) %>

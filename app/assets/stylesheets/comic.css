@@ -1,5 +1,5 @@
 .content {
-  border-bottom: 1px solid black;
+  border-bottom: 6px double black;
   margin-bottom: 10px;
 }
 
@@ -16,13 +16,22 @@
 .comic-info {
   display: flex;
   justify-content: right;
+  border-bottom: 1px solid black;
 }
 
 .comic-volume,
 .comic-completion,
-.comic-author,
-.comic-user {
+.comic-author {
   margin-left: 10px;
+}
+
+.bottom-contents {
+  display: flex;
+  justify-content: right;
+}
+
+.comic-user {
+  margin-right: 10px;
 }
 
 .comic-user a {
