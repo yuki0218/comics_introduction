@@ -5,7 +5,7 @@
       <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
     <% end %>
 
-    <div class="comic-volume"><%= comic.volume %>巻</div>
+    <div class="comic-volume"><%= comic.updated_at.month %>/<%= comic.updated_at.day %>更新 <%= comic.volume %>巻</div>
 
     <div class="comic-completion">
       <% if comic.completion %>
@@ -30,6 +30,5 @@
         <% end %>
       <% end %>
     </div>
-    
   </div>
 </div>
