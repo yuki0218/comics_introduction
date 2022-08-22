@@ -39,10 +39,11 @@
 .right-btn {
   text-decoration: none;
   color: black;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .right-box {
+  font-weight: 600;
   background-color: white;
   display: flex;
   justify-content: flex-end;
@@ -53,6 +54,10 @@
   background-image: url(22928347.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.login-name {
+  justify-content: space-between;
 }
 
 .top-right-box {

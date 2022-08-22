@@ -7,6 +7,7 @@
 } */
 
 .comic-title a {
+  font-weight: 600;
   text-decoration: none;
   color: black;
   font-size: 25px;
@@ -25,6 +26,7 @@
 }
 
 .comic-user a {
+  font-weight: 600;
   text-decoration: none;
   color: black;
 }

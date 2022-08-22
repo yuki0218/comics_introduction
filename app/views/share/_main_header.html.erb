@@ -7,7 +7,10 @@
   <div class="right-btns">
     <% if user_signed_in? %>
       <div class="right-box top-right-box"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "right-btn" %></div>
-      <div class="right-box"><%= link_to "new comic", new_comic_path, class: "right-btn" %></div>
+      <div class="right-box login-name">
+        <%= link_to current_user.nickname, users_path, class: "right-btn" %>
+        <%= link_to "new comic", new_comic_path, class: "right-btn" %>
+      </div>
     <% else %>
       <div class="right-box top-right-box"><%= link_to "Login", new_user_session_path, class: "right-btn" %></div>
       <div class="right-box"><%= link_to "Sign In", new_user_registration_path, class: "right-btn" %></div>
