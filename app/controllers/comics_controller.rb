@@ -41,9 +41,9 @@ class ComicsController < ApplicationController
 
   def search
     if params[:title_word] != nil
-      @comics = Comic.search_title(params[:title_word]).includes(:user)
+      @comics = Comic.search_title(params[:title_word]).where.not(user_id: current_user.id).includes(:user)
     else
-      @comics = Comic.search_genre(params[:target_age], params[:genre]).includes(:user)
+      @comics = Comic.search_genre(params[:target_age], params[:genre]).where.not(user_id: current_user.id).includes(:user)
     end
   end
 
