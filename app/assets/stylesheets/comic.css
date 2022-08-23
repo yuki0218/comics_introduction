@@ -3,9 +3,6 @@
   margin-bottom: 10px;
 }
 
-/* .comic-title {
-} */
-
 .comic-title a {
   font-weight: 600;
   text-decoration: none;
@@ -16,7 +13,6 @@
 .comic-info {
   display: flex;
   justify-content: right;
-  border-bottom: 1px solid black;
 }
 
 .comic-volume,
@@ -28,6 +24,7 @@
 .bottom-contents {
   display: flex;
   justify-content: right;
+  border-top: 1px solid black;
 }
 
 .comic-user {

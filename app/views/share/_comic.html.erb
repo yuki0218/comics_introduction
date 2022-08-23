@@ -15,13 +15,11 @@
     <div class="comic-author">作者：<%= comic.author %></div>
   </div>
 
-  <div class="bottom-contents">
-    <% if current_user.id != comic.user.id %>
+  <% if current_user.id != comic.user.id %>
+    <div class="bottom-contents">
       <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
-    <% end %>
 
-    <div class="good">
-      <% if current_user.id != comic.user.id %>
+      <div class="good">
         <% if current_user.already_favorite(comic) %>
           <%= link_to comic_favorites_path(comic.id), method: :delete do %>
             <i class="fa-solid fa-star"></i>
@@ -31,7 +29,7 @@
             <i class="fa-regular fa-star"></i>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
