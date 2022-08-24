@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+function search() {
   const open = document.getElementById("drawer-toggle");
   const pullDown = document.getElementById("search-bar")
 
@@ -13,4 +13,6 @@ window.addEventListener('load', function() {
       pullDown.classList.add("open")
     }
   });
-});
+};
+
+window.addEventListener('load', search);
