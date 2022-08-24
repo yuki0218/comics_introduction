@@ -1,4 +1,6 @@
 class ComicsController < ApplicationController
+  before_action :move_to_index, only: [:edit, :destroy]
+
   def index
     @comics = Comic.where.not(user_id: current_user.id).order("updated_at DESC").includes(:user)
   end
@@ -51,5 +53,11 @@ class ComicsController < ApplicationController
 
   def comic_params
     params.require(:comic).permit(:title, :author, :volume, :target_age_id, :genre_id, :completion, :memo).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    if current_user.id != Comic.find(params[:id]).user_id
+      redirect_to root_path
+    end
   end
 end
