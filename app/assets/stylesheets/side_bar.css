@@ -5,6 +5,7 @@
   height: calc(100% - 10px);
   padding: 25px;
   margin: 5px;
+  overflow: scroll;
 }
 
 .all-btn {

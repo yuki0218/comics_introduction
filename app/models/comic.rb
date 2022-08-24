@@ -10,7 +10,7 @@ class Comic < ApplicationRecord
   belongs_to :user
   belongs_to :target_age
   belongs_to :genre
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 
   def self.search_title(title)
     if title != ""
