@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   has_many :comics
-  has_many :validates
+  has_many :favorites
 
   def already_favorite(comic)
     Favorite.exists?(user_id: self.id, comic_id: comic.id)

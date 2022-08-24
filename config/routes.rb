@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'users#index'
-  resources :users
+  resources :users do
+    collection do
+      get 'good'
+    end
+  end
   resources :comics do
     collection do
       get 'search'

@@ -9,13 +9,15 @@
 
 .all-btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .all-btn a {
+  width: 40%;
   font-weight: 600;
   background-color: #e5e5e5;
   text-decoration: none;
+  text-align: center;
   color: black;
   padding: 10px 10px;
   border: 1px solid black;
