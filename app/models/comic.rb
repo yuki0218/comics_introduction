@@ -4,8 +4,8 @@ class Comic < ApplicationRecord
   validates :title, presence: true
   validates :author, presence: true
   validates :volume, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 9999}, format:{with: /\A[\d]+\z/}
-  validates :target_age_id, numericality: {other_than: 0, message: "can't be blank"}
-  validates :genre_id, numericality: {other_than: 0, message: "can't be blank"}
+  validates :target_age_id, numericality: {other_than: 0, message: "を選択してください"}
+  validates :genre_id, numericality: {other_than: 0, message: "を選択してください"}
 
   belongs_to :user
   belongs_to :target_age

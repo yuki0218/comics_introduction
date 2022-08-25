@@ -2,6 +2,8 @@
 <div class="new-comic">
   <div class="comic-input">
     <%= form_with model: @comic, local: true do |f| %>
+      <%= render 'share/error_messages', model: f.object %>
+
       <div class="tag">タイトル</div>
       <%= f.text_field :title, placeholder: "タイトル", class: "input-form" %>
 

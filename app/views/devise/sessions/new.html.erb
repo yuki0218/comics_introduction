@@ -2,7 +2,14 @@
 
 <div class="sessions-form">
   <div class="fields">
+    <div class='login-flash-message'>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
       <div class="field">E-mail</div>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-form" %>
 
