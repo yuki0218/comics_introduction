@@ -11,6 +11,7 @@
 ### Association
 
 - has_many :comics
+- has_many :favorites
 
 ## comics テーブル
 
@@ -26,3 +27,16 @@
 ### Association
 
 - belongs_to :user
+- has_many :favorites
+
+## favorites テーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| user      | references | null: false, foreign_key: true |
+| comic     | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :comic
