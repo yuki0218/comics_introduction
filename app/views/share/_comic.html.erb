@@ -19,16 +19,8 @@
     <div class="bottom-contents">
       <div class="comic-user">投稿者：<%= link_to comic.user.nickname, user_path(comic.user.id) %></div>
 
-      <div class="good">
-        <% if current_user.already_favorite(comic) %>
-          <%= link_to comic_favorites_path(comic.id), method: :delete do %>
-            <i class="fa-solid fa-star"></i>
-          <% end %>
-        <% else %>
-          <%= link_to comic_favorites_path(comic.id), method: :post do %>
-            <i class="fa-regular fa-star"></i>
-          <% end %>
-        <% end %>
+      <div class="good" id="favorite-<%= comic.id %>">
+        <%= render partial: "share/favorite", locals: { comic: comic } %>
       </div>
     </div>
   <% end %>

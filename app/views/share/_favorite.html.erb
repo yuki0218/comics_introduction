@@ -1,0 +1,9 @@
+<% if current_user.already_favorite(comic) %>
+  <%= link_to comic_favorites_path(comic.id), method: :delete, remote: true do %>
+    <i class="fa-solid fa-star"></i>
+  <% end %>
+<% else %>
+  <%= link_to comic_favorites_path(comic.id), method: :post, remote: true do %>
+    <i class="fa-regular fa-star"></i>
+  <% end %>
+<% end %>
