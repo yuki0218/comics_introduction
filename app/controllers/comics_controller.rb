@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy]
+  before_action :create_comic, only: [:show, :edit, :update]
 
   def index
     @comics = Comic.where.not(user_id: current_user.id).order("updated_at DESC").includes(:user)
@@ -19,15 +20,12 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @comic = Comic.find(params[:id])
   end
 
   def edit
-    @comic = Comic.find(params[:id])
   end
 
   def update
-    @comic = Comic.find(params[:id])
     if @comic.update(comic_params)
       redirect_to action: :show
     else
@@ -59,5 +57,9 @@ class ComicsController < ApplicationController
     if current_user.id != Comic.find(params[:id]).user_id
       redirect_to root_path
     end
+  end
+
+  def create_comic
+    @comic = Comic.find(params[:id])
   end
 end
