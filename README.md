@@ -12,8 +12,8 @@ https://comics-introduction.herokuapp.com/
 
 # テスト用アカウント
 
-- Basic認証パスワード：unbr
-- Basic認証ID：0305
+- Basic認証ID：unbr
+- Basic認証パスワード：0305
 - メールアドレス：test@test1
 - パスワード：aaa111
 
